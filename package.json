@@ -1,0 +1,15 @@
+{
+  "name": "bot-space-customs-moderator",
+  "version": "1.0.0",
+  "description": "Bot Space Customs - Discord Native",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --max-old-space-size=96 index.js"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^1.9.0",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3"
+  }
+}
