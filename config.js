@@ -60,7 +60,8 @@ const defaultConfig = {
     categoriaId: "1573726025181962379",
     canalPainel: "1572318388057809077",
     titulo: "Central de Atendimento",
-    descricao: "Precisando de suporte ou ajuda? Selecione abaixo o tipo de atendimento para abrir seu ticket privado.",
+    descricao:
+      "Precisando de suporte ou ajuda? Selecione abaixo o tipo de atendimento para abrir seu ticket privado.",
     opcoes: [
       {
         id: "duvida_suporte",
@@ -103,13 +104,19 @@ if (fs.existsSync(CONFIG_PATH)) {
     const raw = fs.readFileSync(CONFIG_PATH, "utf-8");
     savedData = JSON.parse(raw);
   } catch (err) {
-    console.warn("⚠️ Não foi possível ler config.json, usando defaults:", err.message);
+    console.warn(
+      "⚠️ Não foi possível ler config.json, usando defaults:",
+      err.message,
+    );
   }
 }
 
 const config = {
   prefix: savedData.prefix || defaultConfig.prefix,
-  organizacao: { ...defaultConfig.organizacao, ...(savedData.organizacao || {}) },
+  organizacao: {
+    ...defaultConfig.organizacao,
+    ...(savedData.organizacao || {}),
+  },
   cores: { ...defaultConfig.cores, ...(savedData.cores || {}) },
   permissoes: { ...defaultConfig.permissoes, ...(savedData.permissoes || {}) },
   canais: { ...defaultConfig.canais, ...(savedData.canais || {}) },
@@ -117,9 +124,10 @@ const config = {
   tickets: {
     ...defaultConfig.tickets,
     ...(savedData.tickets || {}),
-    opcoes: savedData.tickets?.opcoes && savedData.tickets.opcoes.length > 0
-      ? savedData.tickets.opcoes
-      : defaultConfig.tickets.opcoes,
+    opcoes:
+      savedData.tickets?.opcoes && savedData.tickets.opcoes.length > 0
+        ? savedData.tickets.opcoes
+        : defaultConfig.tickets.opcoes,
   },
 };
 
@@ -140,12 +148,6 @@ config.saveConfig = function () {
   return dataToSave;
 };
 
-/**
- * Atualiza um campo específico e persiste no JSON
- * @param {"organizacao"|"cores"|"permissoes"|"canais"|"cargos"|"tickets"} section 
- * @param {string} key 
- * @param {any} value 
- */
 config.updateConfigField = function (section, key, value) {
   if (!config[section]) config[section] = {};
   config[section][key] = value;
