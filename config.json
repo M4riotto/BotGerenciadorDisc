@@ -1,0 +1,89 @@
+{
+  "prefix": "/",
+  "organizacao": {
+    "nome": "Green",
+    "tipo": "comunidade",
+    "corEmbed": "#3498db",
+    "logoUrl": ""
+  },
+  "cores": {
+    "padrao": "#3498db",
+    "boasVindas": "#00FF00",
+    "saida": "#FF0000",
+    "exoneracao": "#e74c3c",
+    "cargoSucesso": "#00FF7F",
+    "cargoRemovido": "#FF0000",
+    "logMensagemDeletada": "#FF0000",
+    "logMensagemEditada": "#FFA500",
+    "logAlteracaoNick": "#00BFFF",
+    "vozEntrou": "#00FF00",
+    "vozSaiu": "#FF0000",
+    "vozMudou": "#0099FF",
+    "sugestao": "#ADD8E6",
+    "lembrete": "#ff9900",
+    "ticketFinalizado": "#e74c3c"
+  },
+  "permissoes": {
+    "cargoMinimo": "1573726020282884164"
+  },
+  "canais": {
+    "registro": "1573726025366507671",
+    "entrada": "1573726022866833534",
+    "saida": "1573726022866833535",
+    "qd": "1573726022866833535",
+    "exonerados": "1573726023466483764",
+    "promovidos": "1573726025366507671",
+    "logsComandos": "1573726025366507671",
+    "sugestao": "1573726023466483768",
+    "ticket": "1573726023466483765",
+    "categoryId": "1573726022866833533",
+    "msgDelete": "1573726025366507671",
+    "security": "1573726025366507671",
+    "voiceStatus": "1573726025366507671"
+  },
+  "cargos": {
+    "minimoComandos": "1573726020282884164",
+    "novato": "1573726020157178037",
+    "membro": "1573726020282884159",
+    "amigos": "1573726020157178032"
+  },
+  "tickets": {
+    "cargoAtendimento": "1573726020282884164",
+    "categoriaId": "1573726022866833533",
+    "canalPainel": "1573726023466483765",
+    "titulo": "Central de Atendimento",
+    "descricao": "Selecione o tipo de atendimento abaixo para abrir seu ticket privado.",
+    "opcoes": [
+      {
+        "id": "duvida_suporte",
+        "label": "Dúvidas e Suporte Geral",
+        "description": "Tirar dúvidas com a equipe de moderação",
+        "emoji": "❓"
+      },
+      {
+        "id": "denunciar_membro",
+        "label": "Denunciar um Membro",
+        "description": "Denunciar infração de regras ou comportamento inadequado",
+        "emoji": "🚫"
+      },
+      {
+        "id": "entrar_staff",
+        "label": "Entrar para a Staff",
+        "description": "Candidatar-se para a equipe do servidor",
+        "emoji": "🤝"
+      },
+      {
+        "id": "recorrer_punicao",
+        "label": "Recorrer Punição",
+        "description": "Recorrer a um aviso ou castigo recebido",
+        "emoji": "📢"
+      },
+      {
+        "id": "falar_com_dono",
+        "label": "Falar com a Direção",
+        "description": "Contatar diretamente a liderança do servidor",
+        "emoji": "👑"
+      }
+    ]
+  }
+}

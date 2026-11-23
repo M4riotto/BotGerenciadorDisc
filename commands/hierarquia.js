@@ -23,7 +23,7 @@ module.exports = {
     }
 
     const role = interaction.options.getRole("cargo");
-    await interaction.deferReply({ ephemeral: false });
+    await interaction.deferReply();
 
     try {
       const guild = interaction.guild;
